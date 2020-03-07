@@ -4,7 +4,7 @@ This is an exercise created to work with an old version from Node, without NPM d
 
 Each module can use POST, GET, PUT and DELETE except MenuItem, that is using just POST and GET. The return step usually sent by Stripe is not concluded, since the system just should simulate the steps to create an order and send some information to Stripe and Mailgun, finishing the issue.
 
-Modules 
+# Modules 
 
 {
   'users': handlers.users,
@@ -14,7 +14,7 @@ Modules
   'shoppingCart': handlers.shoppingCart
 };
 
-Steps to use the RestFUL OrderPizza API:
+# Steps to use the RestFUL OrderPizza API:
 
 0 - Please, add your keys in config file, to setup connection with Stripe and Mailgun.
 
