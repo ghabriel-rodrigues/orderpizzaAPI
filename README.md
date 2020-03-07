@@ -16,7 +16,7 @@ Each module can use POST, GET, PUT and DELETE except MenuItem, that is using jus
 
 # Steps to use the RestFUL OrderPizza API:
 
-0 - Please, add your keys in config file, to setup connection with Stripe and Mailgun.
+0 - Please, add your keys in config file, to setup connection with Stripe and Mailgun. To use it well, just run 'node index.js' in your terminal and send some POST data to different urls. It is described below.
 
 1 - Creating MenuItems (send POST data to /menuItems)
 
