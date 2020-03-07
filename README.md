@@ -1,10 +1,8 @@
-# OrderPizzaAPI
-
 RESTFUL OrderPizza API:
 
-This is an exercise created to work with an old version from Node, without NPM dependancy integration. The storage is created manually. It uses Stripe to create an order and Mailgun to advertise the user about the order.
+This is an exercise created to work with an old version from Node, without NPM dependancy integration. It uses Stripe to create an order and Mailgun to advertise the user about the order. The storage is created manually.
 
-Each module can use POST, GET, PUT and DELETE except MenuItem, that is using just POST and GET. The return step usually sent by Stripe is not concluded, since the system should simulate the steps to create an order and send some information to Stripe and Mailgun, finishing the issue.
+Each module can use POST, GET, PUT and DELETE except MenuItem, that is using just POST and GET. The return step usually sent by Stripe is not concluded, since the system just should simulate the steps to create an order and send some information to Stripe and Mailgun, finishing the issue.
 
 Modules 
 
@@ -37,11 +35,11 @@ It represents the menu item that can be ordered by the users.
 User is the entity that will store data from the users, so to create an user you just need to send a json to /users like that:
 
 { 
-  "firstName": "<YourName>",
-  "lastName": "<YourLastName>",
-  "email": "<yourvalidemail>@<yourvaliddomain>.com",
-  "password": "<yourpassword>",
-  "streetAddress": "<an address to send your order>"
+  "firstName": <YourName>,
+  "lastName": <YourLastName>,
+  "email": <yourvalidemail>@<yourvaliddomain>.com,
+  "password": <yourpassword>,
+  "streetAddress": <an address to send your order>
 }
 
 3 - Creating a Token (send POST data to /tokens)
@@ -49,8 +47,8 @@ User is the entity that will store data from the users, so to create an user you
 The token will be the way you know when a user can use some functionality or not. Usually to access the functionalities the user needs to have a token active related to his or her account.
 
 { 
-  "email": "<yourvalidemail>@<yourvaliddomain>.com",
-  "password": "<yourpassword>",
+  "email": <yourvalidemail>@<yourvaliddomain>.com,
+  "password": <yourpassword>,
 }
 
 4 - Creating a ShoppingCart (send POST data to /shoppingCart and token in the headers)
@@ -58,7 +56,7 @@ The token will be the way you know when a user can use some functionality or not
 To create a shoppingCart, the user needs to be logged (having a valid token related to his account in headers), and send some data as in the JSON below:
 
 {
-  "email": "<useremail>@<userdomain>,
+  "email": <useremail>@<userdomain>,
   "menuItemsOrderedId: [<id_menuitem1>,<id_menuitem2>,<id_menuitem3>]
 }
 
@@ -73,6 +71,6 @@ The flag should be 'tok_mastercard' or 'tok_visa'
     "flag": flag,
     "expirationDate": expirationDate,
     "shoppingCartId": shoppingCartId, 
-    "email": "<useremail>@<userdomain>,
-    "password": "<yourpassword>",
+    "email": <useremail>@<userdomain>,
+    "password": <yourpassword>,
 }
