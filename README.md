@@ -2,7 +2,7 @@
 
 RESTFUL OrderPizza API:
 
-This is an exercise created to work with an old version from Node, without NPM dependancy integration. It uses Stripe to create an order and Mailgun to advertise the user about the order.
+This is an exercise created to work with an old version from Node, without NPM dependancy integration. The storage is created manually. It uses Stripe to create an order and Mailgun to advertise the user about the order.
 
 Each module can use POST, GET, PUT and DELETE except MenuItem, that is using just POST and GET. The return step usually sent by Stripe is not concluded, since the system should simulate the steps to create an order and send some information to Stripe and Mailgun, finishing the issue.
 
