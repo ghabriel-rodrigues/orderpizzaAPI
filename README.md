@@ -1,4 +1,4 @@
-#RESTFUL OrderPizza API:
+# RESTFUL OrderPizza API:
 
 This is an exercise created to work with an old version from Node, without NPM dependancy integration. It uses Stripe to create an order and Mailgun to advertise the user about the order. The storage is created manually.
 
