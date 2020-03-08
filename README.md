@@ -35,11 +35,11 @@ It represents the menu item that can be ordered by the users.
 User is the entity that will store data from the users, so to create an user you just need to send a json to /users like that:
 
 { 
-  "firstName": <sYourName>,
-  "lastName": <YourLastName>,
+  "firstName": YourName,
+  "lastName": YourLastName,
   "email": <yourvalidemail@yourvaliddomain.com>,
-  "password": <yourpassword>,
-  "streetAddress": <an address to send your order>
+  "password": yourpassword,
+  "streetAddress": an address to send your order
 }
 
 3 - Creating a Token (send POST data to /tokens)
@@ -48,7 +48,7 @@ The token will be the way you know when a user can use some functionality or not
 
 { 
   "email": <yourvalidemail@yourvaliddomain.com>,
-  "password": <yourpassword>,
+  "password": yourpassword,
 }
 
 4 - Creating a ShoppingCart (send POST data to /shoppingCart and token in the headers)
@@ -56,9 +56,9 @@ The token will be the way you know when a user can use some functionality or not
 To create a shoppingCart, the user needs to be logged (having a valid token related to his account in headers), and send some data as in the JSON below:
 
 {
-  "email": <useremail@userdomain>,
+  "email": useremail@userdomain,
   "menuItemsOrderedIds: [<id_menuitem1>,<id_menuitem2>,<id_menuitem3>],
-  "amount":<value>
+  "amount":value
 }
 
 
@@ -70,8 +70,9 @@ The flag should be 'tok_mastercard' or 'tok_visa'
     "cardNumber": cardNumber,
     "cvc": cvc,
     "flag": flag,
+    "amount": amount,
     "expirationDate": expirationDate,
     "shoppingCartId": shoppingCartId, 
-    "email": <useremail@userdomain>,
-    "password": <yourpassword>,
+    "email": useremail@userdomain,
+    "password": yourpassword,
 }
