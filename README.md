@@ -35,9 +35,9 @@ It represents the menu item that can be ordered by the users.
 User is the entity that will store data from the users, so to create an user you just need to send a json to /users like that:
 
 { 
-  "firstName": <YourName>,
+  "firstName": <sYourName>,
   "lastName": <YourLastName>,
-  "email": <yourvalidemail>@<yourvaliddomain>.com,
+  "email": <yourvalidemail@yourvaliddomain.com>,
   "password": <yourpassword>,
   "streetAddress": <an address to send your order>
 }
@@ -47,7 +47,7 @@ User is the entity that will store data from the users, so to create an user you
 The token will be the way you know when a user can use some functionality or not. Usually to access the functionalities the user needs to have a token active related to his or her account.
 
 { 
-  "email": <yourvalidemail>@<yourvaliddomain>.com,
+  "email": <yourvalidemail@yourvaliddomain.com>,
   "password": <yourpassword>,
 }
 
@@ -56,8 +56,9 @@ The token will be the way you know when a user can use some functionality or not
 To create a shoppingCart, the user needs to be logged (having a valid token related to his account in headers), and send some data as in the JSON below:
 
 {
-  "email": <useremail>@<userdomain>,
-  "menuItemsOrderedId: [<id_menuitem1>,<id_menuitem2>,<id_menuitem3>]
+  "email": <useremail@userdomain>,
+  "menuItemsOrderedIds: [<id_menuitem1>,<id_menuitem2>,<id_menuitem3>],
+  "amount":<value>
 }
 
 
@@ -71,6 +72,6 @@ The flag should be 'tok_mastercard' or 'tok_visa'
     "flag": flag,
     "expirationDate": expirationDate,
     "shoppingCartId": shoppingCartId, 
-    "email": <useremail>@<userdomain>,
+    "email": <useremail@userdomain>,
     "password": <yourpassword>,
 }
